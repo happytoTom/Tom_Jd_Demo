@@ -1,0 +1,25 @@
+@charset "utf-8";
+*{
+
+}
+
+.main
+{
+	width:100%;
+	min-width:320px;
+	margin:0 auto;
+	max-width:640px;
+	font-size:14px;
+}
+
+@media screen and (min-width: 480px) {
+    .main {
+        font-size: 21px
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .main {
+        font-size: 28px
+    }
+}
