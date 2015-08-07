@@ -288,7 +288,7 @@
 
 .sen-ticket-s-p
 {
-    padding-top:0;
+    padding-top:.2em;
     color:#b6b6b6;
 }
 
@@ -305,7 +305,25 @@
 
 }
 
+.sen-ticket-name
+{
+    margin-bottom:.5em;
+    display:inline-block;
+}
+
+
 .ticket-hotel-msg .sen-ticket-s-b
+{
+    width:30%;
+    padding-top:2em;
+}
+
+.ticket-hotel-msg .clear-space
+{
+    padding-top:.2em;
+}
+
+.ticket-hotel-msg .sen-ticket-s-b-no-d
 {
     width:30%;
 }
