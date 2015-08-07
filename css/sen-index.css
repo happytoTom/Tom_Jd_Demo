@@ -252,7 +252,7 @@
 }
 
 .sen-tic-price
-{
+{   
     font-size:0.8em;
 }
 
@@ -305,6 +305,26 @@
 
 }
 
+.ticket-hotel-msg .sen-ticket-s-b
+{
+    width:30%;
+}
+
+.ticket-hotel-msg .sen-ticket-s-b a
+{
+    width:60%;
+}
+
+.sen-hotel-price
+{
+    color:#666666;
+    font-size:.71em;
+}
+
+.ticket-hotel-msg .sen-tic-price
+{
+    margin-left:.5em;
+}
 /*秒杀景点详细*/
 
 /*秒杀列表*/
@@ -375,30 +395,31 @@
 }
 
 
-.live_order {
+.sen-kill-order {
   width: 100%;
   float: left;
   background: #ffffff;
+  display:none;
 }
 
-.live_order li {
+.sen-kill-order li {
   width: 96%;
   float: left;
   background: #fff;
 }
 
-.business_pic, .live_order_pic {
+.business_pic, .sen-kill-order_pic {
   width: 25%;
   float: left;
 }
 
-.live_order_pic img {
+.sen-kill-order_pic img {
   width: 100%;
   float: left;
   height: 5em;
 }
 
-.live_order_title_d {
+.sen-kill-order_title_d {
   width: 48%;
   padding-top: .5em;
   padding-left: .5em;
@@ -418,8 +439,9 @@
 }
 
 .sen-kill-list-price {
-  width: 71%;
+  width: 48%;
   padding-left: .5em;
+  display:inline-block;
   overflow: hidden;
 }
 
@@ -429,14 +451,14 @@
     color:#666666;
 }
 
-.live_order_title {
+.sen-kill-order_title {
   display: inline-block;
   width: 58%;
   color: #484848;
   font-size: 100%;
 }
 
-.live_order_time {
+.sen-kill-order_time {
   font-size: .88em;
   width: 6em;
   color: #fff;
@@ -456,13 +478,23 @@
 
 .sen-kill-have
 {
-    background-color:#1a97eb;
-    color:#fff;
-    width:6em;
-    text-align:center;
-    border-radius:.5em;
-    height:1.78em;
-    line-height:1.78em;
+  background-color: #1a97eb;
+  width: auto;
+  text-align: center;
+  border-radius: .5em;
+  height: 1.78em;
+  line-height: 1.78em;
+  display: inline-block;
+  position: absolute;
+  margin-left: .8em;
+}
+
+.sen-kill-have a
+{
+  color: #fff;
+  font-size: .85em;
+  width: 6em;
+  display: inline-block;
 }
 
 /*秒杀列表*/
