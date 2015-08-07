@@ -2,6 +2,7 @@
 <html>
 	<head>
 <title>JDdemo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="author" content="t.jd.com">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -9,21 +10,347 @@
 <meta name="format-detection" content="telephone=no">
 <link rel="stylesheet" type="text/css" href="css/reset.css" charset="gbk"/>
 <link rel="stylesheet" type="text/css" href="css/base.css" charset="gbk"/>
-<link rel="stylesheet" type="text/css" href="css/2013/index/index.css" charset="gbk"/>
-<link rel="apple-touch-icon-precomposed" href="../m.jd.com/images/apple-touch-icon.png" />
+<link rel="stylesheet" type="text/css" href="css/sen-index.css" charset="gbk"/>
 <script type="text/javascript">
-</script>
+            var _winLocation=window.location.href;//获得当前页面的路径，根据路径规则进行逐页替换
+            var _isWebKit = '__proto__' in {};//是否是webkit内核
+            if(_isWebKit){//如果是webkit内核，则分模块使用zepto
+                //要使用zeptojs的路径列表，可以做为分模块替换的开关
+                var _locationList=new Array();
+                //活动模块
+                _locationList.push('activity/proActList');
+                var _needReplace = false;
+                //如果当前路径符合要使用的路径规则，则进行替换
+                for(var i=0;i<_locationList.length;i++){
+                    if(_winLocation.indexOf(_locationList[i])!=-1){
+                        _needReplace=true;
+                        break;
+                    }
+                }
+                //如果是首页的话，则使用zepto
+                var _tmp = _winLocation.replace(/(^http:\/\/)|(\/*$)/g,'');
+                if(_tmp.indexOf('/')<0 || (_tmp.split('/').length<=2 && _tmp.indexOf('/index')>=0)){
+                    _needReplace=true;
+                }
+                //如果是商品详情页的话，则使用zepto
+                var _dlocationList=new Array();
+                _dlocationList.push(/\/product\/([0-9]+)\.html/);
+                _dlocationList.push(/\/orderComment\/([0-9]+)\.html/);
+                _dlocationList.push(/\/consultations\/([0-9]+)\.html/);
+                _dlocationList.push(/\/consultations\/([0-9]+)-([0-9]+)\.html/);
+                _dlocationList.push(/\/comments\/([0-9]+)\.html/);
+                for(var i=0,len=_dlocationList.length;i<len;i++){
+                    if(_dlocationList[i].test(_winLocation)){
+                        _needReplace=true;
+                         break;
+                     }
+                }
+                if(_needReplace){
+                    document.write('<script src="js/zepto.min.js"><\/script>');
+                    document.write('<script type="text/javascript">window.jQuery=window.Zepto;<\/script>');
+                }else{
+                    document.write('<script src="js/jquery-1.6.2.min.js"><\/script>');
+                }
+            }else{//如果是非webkit内核直接使用jquery
+                document.write('<script src="js/jquery-1.6.2.min.js"><\/script>');
+            }
+        </script>
+ <script type="text/javascript" src="js/html5/common.js"></script>
+ <script type="text/javascript" src="js/html5/spin.min.js"></script>
+ <script type="text/javascript" src="js/live-sen-index.js"></script>
+
+
 </head>
-	<body id="body">
+	<body id="body" style="background: rgb(213, 213, 214);">
 	<a name="top"></a>
 	<header>
 	</header>
-	
+	<!--logo-->
 	<div class="new-ct main">
-		<div class="logo">
-		<img src="images/touch2013/index/logo.png" alt="logo">
-		<span>123213</span>
-	</div>
-	</div>
+	
+	<div class="banner scroll-wrapper" id="idContainer2" ontouchstart="touchStart(event)" ontouchmove="touchMove(event);" ontouchend="touchEnd(event);">
+        <a href="#" class="sen-return"></a>
+            <ul class="scroller" style="position:relative;left:0px;width:600%" id="idSlider2">
+    <li style="width:-100.0%">
+        <a href='#'>
+            <img src="http://img30.360buyimg.com/mobilecms/s480x180_g15/M09/10/0F/rBEhWFMxYX4IAAAAAAErPe6Rqk8AAKrYgAI0x4AAStV419.jpg" alt="家装开工季" />
+        </a>
+    </li>
+    <li style="width:-100.0%">
+        <a href='#'>
+            <img src="http://img30.360buyimg.com/mobilecms/s480x180_g13/M09/1F/1E/rBEhU1MxX5YIAAAAAAIQiD3JNtIAAKtOgGueKwAAhCg010.jpg" alt="折上再满399立减100元" />
+        </a>
+    </li>
+    <li style="width:-100.0%">
+        <a href='#'>
+            <img src="http://img30.360buyimg.com/mobilecms/s480x180_g14/M06/1A/1E/rBEhVVMv-jkIAAAAAAHyvYHN4R4AAKwPgLWFe0AAfLV345.jpg" alt="润视界云未来" />
+        </a>
+    </li>
+    <li style="width:-100.0%">
+        <a href='#'>
+            <img src="http://img30.360buyimg.com/mobilecms/s480x180_g12/M00/01/08/rBEQYVMr76cIAAAAAAHjiiuIVDUAADE7wHO9sYAAeOi205.jpg" alt="拒绝思春、宅男御姐出游妆" />
+        </a>
+    </li>
+    <li style="width:-100.0%">
+        <a href='#'>
+            <img src="http://img30.360buyimg.com/mobilecms/s480x180_g15/M00/10/00/rBEhWlMvr5UIAAAAAAGjI_fslKIAAKlbgIiSMUAAaM7000.jpg" alt="3月值得购买手机推荐" />
+        </a>
+    </li>
+    <li style="width:-100.0%">
+        <a href='#'>
+            <img src="http://img30.360buyimg.com/mobilecms/s480x180_g15/M06/10/13/rBEhWVMyTXsIAAAAAAIyrcrO_9AAAKs5QLmg4MAAjLF440.jpg" alt="上客户端下首单送5元现金券" />
+        </a>
+    </li>
+</ul>
+
+    <ul class="new-banner-num new-tbl-type" id="idNum">
+    	<li class="tbl-cell">
+    	<div class="sen-tic-log"> 
+    		<span class="ticket1-icon"></span>
+    		<span class="ticket-name">鸳鸯湖划船</span>
+    	</div>
+
+    	</li>
+    	<li class="tbl-cell">
+
+    		<div class="sen-tic-log"> 
+    			<span class="ticket2-icon"></span>
+    			<span class="ticket-name">5A级景区</span>
+    		</div>
+    	</li>
+    	<li class="tbl-cell">
+    		<div class="sen-tic-log"> 
+	    		<span class="ticket3-icon"></span>
+	    		 <span class="ticket-name"><span id="curpic"></span>/<span id="allpic"></span>张照片</span>
+    		</div>
+    	</li>
+    	<li class="tbl-cell">
+    		
+    	</li>
+    </ul>
+
+ </div>
+<div class="admision-time-msg">
+    <div>
+        <span class="ticket4-icon"></span>
+        <span>开放时间：周一至周六8:00-17:00</span>
+    </div>
+    <div>
+        <span class="ticket5-icon"></span>
+        <span>景区地址：黔南州</span>
+    </div>
+</div>
+
+<div class="admision-menu table-space">
+	<span class="admision-menu1 admision-menu-on">门票</span>
+	<span class="admision-menu1">景区介绍</span>
+</div>
+<div class="clearfix"></div>
+<div class="head_line"></div>
+
+<ul class="ticket-msg" style="display:block">
+	<li class="table-space">
+		<div class="sen-ticket">
+			<div class="fl" style="width: 48%">
+				<div>门票名称</div>
+				<div class="sen-tic-price">
+					<span class="sen-s">秒杀价：0元</span>
+					<span class="sen-o">原价：100元</span>
+				</div>
+			</div>
+			<div class="sen-ticket-s-b fl">
+				<a href="#">秒杀</a>
+			</div>
+		</div>
+	</li>
+	<div class="head_line"></div>
+	<li class="table-space">
+		<div class="sen-ticket">
+			<div class="fl" style="width: 48%">
+				<div>门票名称</div>
+			</div>
+			<div class="sen-ticket-s-b sen-ticket-s-p fl">
+				<span>150.00元</span>
+			</div>
+		</div>
+	</li>
+	<div class="head_line"></div>
+	<li class="table-space">
+		<div class="sen-ticket">
+			<div class="fl" style="width: 48%">
+				<div>门票名称</div>
+			</div>
+			<div class="sen-ticket-s-b sen-ticket-s-p fl">
+				<span>150.00元</span>
+			</div>
+		</div>
+	</li>
+	<div class="clearfix"></div>
+</ul>
+
+<ul class="ticket-msg">
+	<div>
+		<p class="sen-ticc-info">荔波樟江风景名胜位于贵州省南部的黔南布依族苗族自治州荔波县境内,毗邻广西环江、南丹县。处在桂林——贵阳——昆明的三角旅游空白区。是国务院1994年公布的第三批国家级风景名胜区，2007年作为“中国南方喀斯特”的一员被联合国教科文组织批准列入《世界遗产名录》，是中国第六个、贵州省第一个世界自然遗产地。景区总面积约118.8平方公里，由小七孔景区、大七孔景区、水春河景区和樟江风光带组成。具有代表性景源48处，其中特级景源4处，一级景源6处，二级景源10处，三级景源16处，四级景源12处。</p></div>
+</ul>
+	<div class="clearfix"></div>
+
+<input type="hidden" value="6" id="activity"/>
+<input type="hidden" value="15" id="crazy"/>
+	<script>
+//活动轮播图
+var picCount = $("#activity").val();
+    $(".pic-num1").css("width",(picCount*30)+"px");
+    var forEach = function(array, callback){
+        for (var i = 0, len = array.length; i < len; i++) { callback.call(this, array[i], i); }
+    }
+    var st = createPicMove("idContainer2", "idSlider2", picCount);  //图片数量更改后需更改此数值
+    $("#allpic").html(st._count);
+    var nums = [];
+    //插入数字
+    // for(var i = 0, n = st._count - 1; i <= n;i++){
+    //     var li = document.createElement("li");
+    //     nums[i] = document.getElementById("idNum").appendChild(li);
+    // }
+    //设置按钮样式
+    st.onStart = function(){
+        //forEach(nums, function(o, i){ o.className = ""})
+  	$("#curpic").html(st.Index + 1);
+        //forEach(nums, function(o, i){ o.className = st.Index == i ? "new-tbl-cell on" : "new-tbl-cell"; })
+    }
+    // 重新设置浮动
+    $("#idSlider2").css("position","relative");
+    
+    var _initX = 0;
+    var _finishX = 0;
+    var _startX = 0;
+    var _startY = 0;
+    function touchStart(event) {
+        _startX = event.touches[0].clientX;
+        _startY = event.touches[0].clientY;
+        _initX = _startX;
+    }
+    function touchMove(event) {
+        var touches = event.touches;
+        var _endX = event.touches[0].clientX;
+        var _endY = event.touches[0].clientY;
+        if(Math.abs(_endY-_startY)>Math.abs(_endX-_startX)){
+            return;     
+        }
+        event.preventDefault();
+        _finishX = _endX;
+        var _absX = Math.abs(_endX-_startX);
+        var lastX = $('#idSlider2').css('left').replace('px','');
+        if(_startX>_endX){
+            st.Stop();
+            $('#idSlider2').css('left',(parseInt(lastX)-_absX)+'px');
+        }else{
+            st.Stop();
+            $('#idSlider2').css('left',(parseInt(lastX)+_absX)+'px');
+        } 
+        _startX = _endX;
+    }
+    //触屏  离开屏幕事件
+    function touchEnd(event) {
+        if(_finishX==0){
+            return;
+        }
+        if(_initX>_finishX){
+            bindEvent(_initX,_finishX);
+        }else if(_initX<_finishX){
+            bindEvent(_initX,_finishX);
+        }
+        _initX = 0;
+        _finishX = 0;
+    }
+
+    /**
+     *  绑定触屏触发事件
+     * @param start
+     * @param end
+     */
+    function bindEvent(start,end){
+         if (start >= end) {
+                   st.Next();
+                } else {
+                    st.Previous();
+                }
+    }
+    st.Run();
+    var resetScrollEle = function(){
+        $("#shelper").css("width",$("#newkeyword").width()+"px");
+        var slider2Li = $("#idSlider2 li");
+        slider2Li.css("width",$(".scroll-wrapper").width()+"px");
+        $("#shelper").css("width",$("#newkeyword").width()+"px");
+    }
+    
+    window.addEventListener("resize",function(){
+        st.Change = st._slider.offsetWidth/st._count;
+        st.Next();
+        resetScrollEle();
+    });
+    window.addEventListener("orientationchange",function(){
+        st.Change = st._slider.offsetWidth/st._count;
+        st.Next();
+        resetScrollEle();
+    })
+    resetScrollEle();
+    
+        $(function(){
+        //根据cookie判断用户是否已经主动取消，主动取消了则不再出现提醒
+        var cookieName="ucTip";
+        var cancel = false;
+        var start = document.cookie.indexOf(cookieName+"=");
+        if (start !=-1) {
+            start = start+cookieName.length+1;
+            var end = document.cookie.indexOf(";",start);
+            if (end==-1) {end = document.cookie.length;}
+            var ucTip = document.cookie.substring(start,end);
+            if(ucTip=='1'){
+                cancel = true; 
+            }
+        }
+        if(!cancel){
+            //外层div元素
+            var ucElement = $('<div>').attr('id','ucTip').css({"position":"fixed","bottom":"30%","z-index":"10001","border":"0","display":"none"});
+            //frame元素，目前UC只支持该接入类型
+            var ucFrame = $('<iframe>').css({"height":"160px","width":"320px","border":"0px"}).attr('src','../app.uc.cn/appstore/AppCenter/frame@uc_param_str=nieidnutssvebipfcp&api_ver=2.0&id=445&bg=#ffffff');
+            ucElement.append(ucFrame);
+            //将元素添加到页面
+            $('body').append(ucElement);
+            //回调方法
+            window.addEventListener("message",function(event){
+                var dt = event.data.type;
+                var dm = event.data.message;
+                //判断出现的情况
+                if(dm!='not android uc' && dm!='not exist' && dm!='browser version error' && dm!='already exist' && dm!=undefined){
+                    $('#ucTip').show();
+                }
+                //判断隐藏的情况
+                if (dm == 'success' || dm=='cancle' || dm=='close'){
+                    $('#ucTip').hide();
+                    //如果用户主动取消，则记录到cookie，30天内不再提醒
+                    if(dm=='cancle'){
+                        var expires = new Date();
+                        expires.setTime(expires.getTime() + 30*24*60*60*1000);
+                        document.cookie=cookieName+'=1;expires='+expires.toGMTString()+';path=/;domain=.jd.com';
+                        document.cookie=cookieName+'=1;expires='+expires.toGMTString()+';path=/;domain=.360buy.com';
+                    }
+                }
+            },false);
+        }
+    });
+        function clickResponse(obj){
+        $('[res]').removeClass('on');
+        $(obj).addClass('on');
+        setTimeout(function(){
+            $(obj).removeClass('on');
+        },700);
+    }
+    $("#newkeyword").focus(function(){
+        setTimeout(function(){
+             window.scrollTo(0,$("#newkeyword").offset().top-60);
+         },10);     
+    });
+</script>  
 	</body>
 </html>
