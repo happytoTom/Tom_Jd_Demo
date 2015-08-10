@@ -300,7 +300,7 @@
     text-indent: 2em;
     color:#333333;
     text-overflow:ellipsis;
-    word-break:keep-all;
+    word-break:break-all;
     line-height: 1.4em;
 
 }
