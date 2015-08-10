@@ -42,6 +42,11 @@ body
 	margin:.5em 0;
 }
 
+.tbl-space-top5
+{
+	margin-top :.5em;
+}
+
 .clear-space
 {
 	padding:0;
