@@ -508,6 +508,55 @@
   height: 5.35em;
 }
 
+.tinytip {
+  color: #fff;
+  padding: 5px;
+  width: 100%;
+  color:#333333;
+  border-radius:.5em;
+  line-height:1.5em;
+}
+
+
+
+.arrow_box{
+    border:2px solid #ff8800;
+    position:relative;
+    background-color:#ffd099;
+}
+.arrow_box:before,.arrow_box:after
+{
+    content:"";
+    display:block;
+    border-width:20px;
+    position:absolute; 
+    bottom:-40px;
+    left:80px;
+    border-style:solid dashed dashed;
+    border-color:#ff8800 transparent transparent;
+    font-size:0;
+    line-height:0;
+
+}
+
+
+.arrow_box:after { 
+    bottom: -38px;
+    border-color:#ffd099 transparent transparent;
+  }
+
+.topBox
+{
+  width:11em;
+  font-size:.6em;
+  word-break:break-all;
+}
+
+.topBox p
+{
+  text-align:center;
+    font-weight: bold;
+}
 /*秒杀列表*/
 
 @media screen and (min-width: 480px) {
